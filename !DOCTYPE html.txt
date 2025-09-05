@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Information Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h2, h3 { color: #2c3e50; }
+    form { max-width: 700px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    .section { margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px; }
+    button { margin-top: 20px; padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #2980b9; }
+  </style>
+</head>
+<body>
+
+  <h2>Client Information Form</h2>
+  <form enctype="multipart/form-data">
+
+    <!-- Login -->
+    <label>Customer Name:</label>
+    <input type="text" name="customerName" required>
+
+    <!-- Educational & Professional -->
+    <div class="section">
+      <h3>Educational & Professional Details</h3>
+      <label>Qualification:</label>
+      <input type="text" name="qualification">
+
+      <label>Designation:</label>
+      <input type="text" name="designation">
+
+      <label>Company Name:</label>
+      <input type="text" name="companyName">
+
+      <label>Industry Type:</label>
+      <input type="text" name="industryType">
+
+      <label>Annual CTC (₹):</label>
+      <input type="number" name="annualCTC">
+    </div>
+
+    <!-- Physical -->
+    <div class="section">
+      <h3>Physical Details</h3>
+      <label>Height (cm):</label>
+      <input type="number" name="height">
+
+      <label>Weight (kg):</label>
+      <input type="number" name="weight">
+
+      <label>Tobacco User:</label>
+      <select name="tobaccoUser">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Any Medical History:</label>
+      <textarea name="medicalHistory"></textarea>
+    </div>
+
+    <!-- Family -->
+    <div class="section">
+      <h3>Family Details</h3>
+      <label>Father's Name:</label>
+      <input type="text" name="fatherName">
+
+      <label>Mother's Name:</label>
+      <input type="text" name="motherName">
+    </div>
+
+    <!-- Insurance -->
+    <div class="section">
+      <h3>Existing Insurance Details</h3>
+      <textarea name="insuranceDetails"></textarea>
+    </div>
+
+    <!-- Nominee -->
+    <div class="section">
+      <h3>Nominee Details</h3>
+      <label>Nominee Name:</label>
+      <input type="text" name="nomineeName">
+
+      <label>Date of Birth:</label>
+      <input type="date" name="nomineeDOB">
+
+      <label>Relationship with Life Assured (LA):</label>
+      <input type="text" name="relationshipLA">
+    </div>
+
+    <!-- Social -->
+    <div class="section">
+      <h3>Social Details</h3>
+      <label>Mobile Number:</label>
+      <input type="tel" name="mobileNumber">
+
+      <label>Email Address:</label>
+      <input type="email" name="email">
+    </div>
+
+    <!-- Document Upload -->
+    <div class="section">
+      <h3>Document Upload</h3>
+      <label>PAN Card:</label>
+      <input type="file" name="panCard" accept=".pdf,.jpg,.jpeg,.png">
+
+      <label>Aadhaar Card:</label>
+      <input type="file" name="aadhaarCard" accept=".pdf,.jpg,.jpeg,.png">
+
+      <label>Cancelled Cheque or Passbook:</label>
+      <input type="file" name="bankProof" accept=".pdf,.jpg,.jpeg,.png">
+
+      <label>Other Documents:</label>
+      <input type="file" name="otherDocs" multiple accept=".pdf,.jpg,.jpeg,.png">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
